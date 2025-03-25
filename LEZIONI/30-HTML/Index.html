@@ -1,0 +1,39 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <h1>Hello World</h1>
+    <script src="script.js"></script>
+
+<hr> <!-- il tag hr crea una linea orizzontale -->
+
+<form action="https://reqbin.com/echo" method="get">
+    <input type="submit" value="reqbin echo">
+    <!--Quando clicco su reqbin echo fa una get all'indirizzo della action-->
+</form>
+<hr>
+
+<form action="https://reqbin.com/echo" method="get">
+    nome: <input type="text" name="nome" /><br>
+    cognome: <input type="text" name="cognome" /><br>
+    <input type="submit" value="reqbin echo">
+    <!--i parametri inviati attraverso la form in modalità get , passano in chiaro
+    tramite query string es https://reqbin.com/echo?nome=ciao # Se inserisco come
+    valore al nome name=nome il valore ciao
+     NEl caso ho più input type abc e cognome.. li accoderà in qsto modo:
+     https://reqbin.com/echo?nome=vincenzo&cognome=maione
+    
+    -->
+</form>
+<hr>
+<hr>
+
+<form action="https://www.google.com" method="get">
+    <input type="submit" value="Google" >
+</form>
+
+</body>
