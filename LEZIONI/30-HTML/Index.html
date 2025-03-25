@@ -9,31 +9,48 @@
     <h1>Hello World</h1>
     <script src="script.js"></script>
 
-<hr> <!-- il tag hr crea una linea orizzontale -->
+<hr> <!-- il tag <hr> crea una linea orizzontale -->
 
 <form action="https://reqbin.com/echo" method="get">
     <input type="submit" value="reqbin echo">
-    <!--Quando clicco su reqbin echo fa una get all'indirizzo della action-->
+    <!--Quando clicco su "reqbin echo" fa una get all'indirizzo della action-->
 </form>
-<hr>
+
+<hr color="green" size="2">
+<h2>Chiamata in get</h2>
 
 <form action="https://reqbin.com/echo" method="get">
-    nome: <input type="text" name="nome" /><br>
-    cognome: <input type="text" name="cognome" /><br>
-    <input type="submit" value="reqbin echo">
+    nome: <input type="text" name="nome" /> <br>
+    cognome: <input type="text" name="cognome" /> <br>
+    <input type="submit" value="reqbin echo get">
     <!--i parametri inviati attraverso la form in modalità get , passano in chiaro
-    tramite query string es https://reqbin.com/echo?nome=ciao # Se inserisco come
+    tramite queryString es https://reqbin.com/echo?nome=ciao # Se inserisco come
     valore al nome name=nome il valore ciao
      NEl caso ho più input type abc e cognome.. li accoderà in qsto modo:
-     https://reqbin.com/echo?nome=vincenzo&cognome=maione
-    
+     https://reqbin.com/echo?nome=vincenzo&cognome=maione Questa metodo è sconsigliato per valori riservati
+     w/o troppo lunghi.. appeesentirebbe l'url!
     -->
 </form>
-<hr>
-<hr>
+<hr color="green" size="1">
+
 
 <form action="https://www.google.com" method="get">
     <input type="submit" value="Google" >
+    <!--Il pulsante submit sta eseguendo un get sull'url della action= google.com-->
 </form>
+
+
+<hr color="green" size="2">
+<!--Html POST -->
+<h2>Chiamata in post</h2>
+<form action="https://reqbin.com/echo/post/form" method="post">
+    <!--Effettuo la richiesta in modalità POST e a  differenza del get permette di inviare, in questo caso i valori di un form
+    NON nell'header della richiesta (Query String), quindi campi visibili ,MA, direttamente nel Corpo della richiesta! (PAYLOAD)
+    -->
+    nome: <input type="text" name="nome" /> <br>
+    cognome: <input type="text" name="cognome" /> <br>
+            <input type="submit" value="Invia il tutto" >
+</form>
+<hr color="green" size="2">
 
 </body>
