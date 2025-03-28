@@ -1,0 +1,27 @@
+<!--
+In questa lezione lavoreremo con il tag <style> direttamente nel head della pagina
+    potremmo anche utilizzare il tag <link> per richiamare un file esterno .css
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+-->
+<style>
+    h1{color: red; /*colore del testo*/}
+    h2{color: blue;}
+    div{
+        background-color: rgb(221, 241, 223); /*colore di sfondo*/
+        width: 420px;
+        padding: 10px; /*scrivendo solo 10 significa padding totale top right bottom left*/
+        border: solid;
+        margin: 10px 12px 15px 35  /*Quando c'è un solo valore come in qst caso è da considerarsi 10
+                        in ogni dimensione top right bottom left*/
+    }
+</style>
+
+<body>
+    <h1>HELLO WORLD</h1>
+    <div>
+        <h2>test------------------------------------------</h2> <br> <!-- <br> questo testo sarà blu perchè + specifico -->
+        <h1>test</h2>
+    </div>
+
+</body>
