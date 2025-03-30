@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lezione 35 - CSS - POSITION</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Error eaque magnam magni a atque blanditiis vero modi placeat, 
+            inventore cupiditate corrupti veniam quo, odio dignissimos. 
+            Magni culpa aliquam dolor nobis!
+        </div>
+        <hr>
+        <h3>qui applico un div id="uno"<br> </h3> <h4>l'id="uno" sul div ha priorità sul selettore div generico<br>
+        e quindi il div id="uno" viene applicato prima del div generico - lo sfondo diventa light coral<br>
+        </h4>
+        <div id="uno">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+            Consectetur vero fugiat unde reprehenderit, 
+            ducimus tempora molestiae eaque labore voluptas sequi architecto 
+            accusamus repellat rerum ea quasi est maiores, totam libero!
+        </div>
+
+        <hr>
+
+        <!-- Creo un div con id="2" quindi prevale il selettore di ID=2 sul selettore DIV generico -->
+        <div id="due"> <img src="img/rana.jpg" width="100px" >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Error eaque magnam magni a atque blanditiis vero modi placeat, 
+            - QUESTO SENZA FLOAT
+        </div>
+
+        <hr>
+
+        <!-- div con classe id="tre" Ha lo sfondo verde 
+             la classe primo sul div (div.tre:firstletter) Fa diventare la Prima lettera XX-large
+             al selettore img si applica una classe sx che ha il float dell'immagine a sx
+             facendo galleggiare il testo a dx dell'immagine-->
+        <div id="tre" class="primo"><img class="sx" src="img/rana.jpg" width="100px" >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Error eaque magnam magni a atque blanditiis vero modi placeat, Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Error eaque magnam magni a atque blanditiis vero modi placeat, 
+            QUESTO CON FLOAT LEFT
+        </div>
+
+        <hr>
+
+        <div id="tre" class="primo"> <img class="sx" src="img/rana.jpg" width="100px" >
+            <div class="dx">Hello World</div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Error eaque magnam magni a atque blanditiis vero modi placeat, 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Error eaque magnam magni a atque blanditiis vero modi placeat, 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Error eaque magnam magni a atque blanditiis vero modi placeat, Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Error eaque magnam magni a atque blanditiis vero modi placeat, Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Error eaque magnam magni a atque blanditiis vero modi placeat, 
+        </div>
+        <hr>
+
+        <p>Applicando dopo helloworld la classe remove_float al paragrafo p <br>
+        il div con id="tre" non ha più il float a sx e quindi il testo si allinea sotto l'immagine <br>
+        </p>
+
+        <div id="tre" class="primo"> <img class="sx" src="img/rana.jpg" width="100px" >
+            <div class="dx">Hello World</div>
+            <p class="remove_float">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Error eaque magnam magni a atque blanditiis vero modi placeat, 
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Error eaque magnam magni a atque blanditiis vero modi placeat, 
+               
+                
+            </p>
+
+        </div>
+        
+
+
+
+
+
+
+    </body>
+</html>

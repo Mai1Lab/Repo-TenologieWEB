@@ -19,7 +19,7 @@ div.primo:first-letter{   /* La classe primo agisce sulla prima lettera all'inte
 
 #tre {  /* ID tre agisce su un div con id="tre" */
     background-color: lightgreen;
-    height: 150px;
+    height: 200px;
 }
 
 #quattro {  /* ID quattro agisce su un div con id="quattro" */
