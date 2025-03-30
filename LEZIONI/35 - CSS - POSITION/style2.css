@@ -1,0 +1,35 @@
+html,body {
+    height: 100%;
+    width: 100%;
+}
+
+img {
+    border: 2px solid black;
+    position: relative; /* Posizione relativa per il posizionamento assoluto degli elementi figli */
+    left: 30px; /* Sposta l'immagine a destra di 30px */
+
+}
+
+.red {
+    background-color: red;  /* Colore di sfondo rosso */
+    width: 100px; /* Larghezza del div */
+    height: 100px; /* Altezza del div */
+    
+}
+
+.blue {
+    background-color: blue; /* Colore di sfondo blu */
+    width: 100px; /* Larghezza del div */
+    height: 100px; /* Altezza del div */
+    position: relative; /* Posizione relativa per il posizionamento assoluto degli elementi figli */
+    top: 100px; /* Sposta il div in basso di 100px rispetto alla sua nuova posizione relativa */ 
+    z-index: -1;    /* Posiziona il div dietro gli altri elementi con z-index più alto */
+}
+
+.green {
+    background-color: green; /* Colore di sfondo verde */
+    width: 100px; /* Larghezza del div */
+    height: 100px; /* Altezza del div */
+     
+}
+

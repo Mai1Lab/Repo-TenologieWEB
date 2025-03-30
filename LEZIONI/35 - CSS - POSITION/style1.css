@@ -1,0 +1,48 @@
+html,body {
+    height: 100%;
+    width: 100%;
+}
+
+img {
+    border: 2px solid black;
+    position: relative; /* Posizione relativa per il posizionamento assoluto degli elementi figli */
+    left: 30px; /* Sposta l'immagine a destra di 30px */
+
+}
+
+.red {
+    background-color: red;  /* Colore di sfondo rosso */
+    width: 100px; /* Larghezza del div */
+    height: 100px; /* Altezza del div */
+    position: relative; /* Posizione relativa per il posizionamento assoluto degli elementi figli */
+    left: 40px; /* Sposta il div a destra di 40px */
+   /* margin-bottom: 10px;  */    /* Spazio di 10px sotto il div */
+}
+
+.blue {
+    background-color: blue; /* Colore di sfondo blu */
+    width: 100px; /* Larghezza del div */
+    height: 100px; /* Altezza del div */
+    
+}
+
+.green {
+    background-color: green; /* Colore di sfondo verde */
+    width: 100px; /* Larghezza del div */
+    height: 100px; /* Altezza del div */
+    position: relative; /* Posizione relativa per il posizionamento assoluto degli elementi figli */
+    left: 100px; /* Sposta il div a destra di 100px */
+   
+}
+
+.blue2 {
+    background-color: blue; /* Colore di sfondo blu */
+    width: 100px; /* Larghezza del div */
+    height: 100px; /* Altezza del div */
+    right: 100px; /* Sposta il div a sinistra di 100px  oppure lo sposto da desyra di 100
+    e siccome il div è 100, va quasi a schiacciarsi sul lato sinistro*/
+    position: relative; /* Posizione relativa per il posizionamento assoluto degli elementi figli */
+    
+}
+
+

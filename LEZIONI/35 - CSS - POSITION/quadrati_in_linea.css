@@ -1,0 +1,66 @@
+html,body {
+    height: 100%;
+    width: 100%;
+}
+
+img {
+    border: 2px solid black;
+    position: relative; /* Posizione relativa per il posizionamento assoluto degli elementi figli */
+    left: 30px; /* Sposta l'immagine a destra di 30px */
+
+}
+
+.red {
+    background-color: red;  /* Colore di sfondo rosso */
+    width: 100px; /* Larghezza del div */
+    height: 100px; /* Altezza del div */
+    
+}
+
+.blue {
+    background-color: blue; /* Colore di sfondo blu */
+    width: 100px; /* Larghezza del div */
+    height: 100px; /* Altezza del div */
+    position: relative; /* Posizione relativa per il posizionamento assoluto degli elementi figli */
+    left: 100px; /* Sposta il div in basso di 100px rispetto alla sua nuova posizione relativa */
+    bottom: 100px; /* Sposta il div in basso di 100px rispetto alla sua nuova posizione relativa */
+    
+}
+
+.green {
+    background-color: green; /* Colore di sfondo verde */
+    width: 100px; /* Larghezza del div */
+    height: 100px; /* Altezza del div */
+    position: relative ;    /* Posizione relativa per il posizionamento assoluto degli elementi figli */
+    bottom: 200px; /* Sposta il div in basso di 200px rispetto alla sua nuova posizione relativa */
+    left: 200px; /* Sposta il div a destra di 300px rispetto alla sua nuova posizione relativa */
+}
+
+
+
+.red2 {
+    background-color: red;  /* Colore di sfondo rosso */
+    width: 100px; /* Larghezza del div */
+    height: 100px; /* Altezza del div */
+    position: relative; /* Posizione relativa per il posizionamento assoluto degli elementi figli */
+    display: inline-block; /* Permette di posizionare i div uno accanto all'altro */
+    
+}
+
+.blue2 {
+    background-color: blue; /* Colore di sfondo blu */
+    width: 100px; /* Larghezza del div */
+    height: 100px; /* Altezza del div */
+    position: relative; /* Posizione relativa per il posizionamento assoluto degli elementi figli */
+    display: inline-block; /* Permette di posizionare i div uno accanto all'altro */
+     
+}
+
+.green2 {
+    background-color: green; /* Colore di sfondo verde */
+    width: 100px; /* Larghezza del div */
+    height: 100px; /* Altezza del div */
+    position: relative; /* Posizione relativa per il posizionamento assoluto degli elementi figli */
+    display: inline-block; /* Permette di posizionare i div uno accanto all'altro */
+    }
+
