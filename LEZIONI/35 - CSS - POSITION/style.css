@@ -43,3 +43,7 @@ div.dx {
     background-color: lightblue;
     float: right; /* Il div con classe dx galleggia a destra e il testo quindi scorre sul lato sx*/
 }
+
+.remove_float{
+    clear: left;
+}
