@@ -1,0 +1,45 @@
+div {
+    background-color: lightgray;   
+    /* Colore di sfondo per tutti i div nel caso non si specificano alcun id */ 
+}
+
+div.primo:first-letter{   /* La classe primo agisce sulla prima lettera all'interno di un contenitore DIV */
+    font-size: xx-large;
+    float: left;
+    color: red;
+}
+
+#uno {  /* ID uno agisce su un div con id="uno" e quindi è più specifico rispetto al singolo selettore div */
+    background-color: lightcoral;
+}
+
+#due {  /* ID due agisce su un div con id="due" */
+    background-color: lightcyan;
+}
+
+#tre {  /* ID tre agisce su un div con id="tre" */
+    background-color: lightgreen;
+    height: 150px;
+}
+
+#quattro {  /* ID quattro agisce su un div con id="quattro" */
+    background-color: lightpink;
+    height: 150px;
+}
+
+img.sx {  /* La classe sx agisce su un'immagine con classe="sx" */
+    border-width: none;
+    float: left; /* L'immagine con classe sx galleggia a sinistra e il testo quindi scorre sul lato dx*/
+}
+
+img.dx {  /* La classe dx agisce su un'immagine con classe="dx" */
+    border-width: none;
+    float: right; /* L'immagine con classe dx galleggia a destra e il testo quindi scorre sul lato sx*/
+}
+
+div.dx {
+    border-width: 1px;
+    border-color: black;
+    background-color: lightblue;
+    float: right; /* Il div con classe dx galleggia a destra e il testo quindi scorre sul lato sx*/
+}
