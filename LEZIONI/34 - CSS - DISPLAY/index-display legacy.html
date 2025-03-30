@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>Display Legacy</title>
+    <style>
+        /* .a e .b sono delle classi questo è un commento CSS */
+        .a{
+            border: 1px solid red;
+            background-color: lightcoral;
+            padding: 10px;
+            width: 200px;
+          
+        }
+        .b{
+            border: 1px solid black;
+            background-color: lightgray;
+            padding: 10px;
+            display: inline-block;
+          /* inserendo questa proprietà noteremo che il div con classe b si trasformerà in un line-block*/
+        }
+        .c{
+            border: 1px solid black;
+            background-color: lightgray;
+            padding: 10px;
+            display: inline;
+            width: 400px;
+          /* inserendo questa proprietà noteremo che il div diventa un inline e si accavalla perchè
+          prende in considerazione cmq le proprietà del div es: padding */
+        }
+           
+    </style>
+</head>
+<body>
+<h1>display Legacy</h1>
+
+<h2>display</h2>
+
+<!-- Creo un contenitore div con classe a -->
+<div class="a">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, quae! Iste unde quasi non eveniet vel.
+    <div class="b">HELLO World</div>vestibulum ante ipsum primis in.
+ </div>
+
+ <div class="a">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, quae! Iste unde quasi non eveniet vel.
+    <div class="c">HELLO World</div>vestibulum ante ipsum primis in.
+ </div>
+
+</body>
+
+
+</html>
