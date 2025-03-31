@@ -1,0 +1,8 @@
+div {
+    background-color: lightgrey;
+}
+
+#uno { / * ID uno */
+    background-color: lightcoral
+    overflow: scroll; /*scorrimento*/
+}
