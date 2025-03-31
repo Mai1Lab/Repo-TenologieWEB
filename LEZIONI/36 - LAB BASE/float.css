@@ -2,7 +2,35 @@ div {
     background-color: lightgrey;
 }
 
-#uno { / * ID uno */
-    background-color: lightcoral
+#uno {  /* ID uno /* id uno */
+    background-color: lightcoral;
     overflow: scroll; /*scorrimento*/
+}
+
+#due {  /* ID due /* id due */
+    background-color: lightcyan;
+    overflow: scroll; /*nascosto*/
+}
+
+img.sx{
+    border-width: none; /* nessun bordo */
+    float: left; /* float a sinistra , se non lo metto il div imagine va in line con il testo */
+}
+
+img.dx{
+    border-width: none; /* nessun bordo */
+    float: right; /* float a destra , se non lo metto il div imagine va in line con il testo */
+}
+
+
+div.dx { /* classe dx solo per i div */
+    border-width: 1px; /* bordo di 1 pixel */
+    border-color: black; /* colore del bordo */
+    background-color: lightsteelblue; /* colore di sfondo */
+    float: right; /* float a destra */
+}
+
+div.remove {
+    float:remove; /* float remove */
+    background-color: lightseagreen;
 }
