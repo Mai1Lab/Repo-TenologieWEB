@@ -1,0 +1,26 @@
+
+.red{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    left:100px; /* Sposta l'elemento 100px a destra */
+}
+
+.blue{
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    bottom: 100px; /* Sposta l'elemento 100px in altoo (rispetto a dove sta dl bordo inferiore
+    deve andare a 100 in alto , perchè con relative si parte dalla nuova posizione  */
+}
+.green{
+    background-color: green;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    /* Sposta l'elemento 200px in alto (rispetto a dove sta dl bordo inferiore e 200px a sinistra) */
+    bottom:200px;
+    left:200px;
+}
