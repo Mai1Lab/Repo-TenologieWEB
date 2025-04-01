@@ -1,0 +1,40 @@
+h1{
+    color:blue
+}
+.none{
+    display:none;
+}
+
+.block{
+    display:block;
+    color: brown;
+    border: 2px solid black;
+    
+}
+
+.inline{   
+    display:inline;
+    color: brown;
+    border: 2px solid black;
+    
+}
+
+/* db sta per Display-block{    
+    display:block;  /* Imposta il display su block */
+ 
+ .db{
+    display:block;
+    color: rgb(104, 165, 42);
+  
+    
+}
+
+/* ilb sta per Display-inline-block{    
+    display:inline-block;  /* Imposta il display su inline-block */
+ 
+ .ilb{
+    display:inline-block;
+    color: rgb(104, 165, 42);
+  
+    
+}
