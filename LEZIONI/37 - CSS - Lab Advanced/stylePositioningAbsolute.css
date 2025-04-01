@@ -1,0 +1,22 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.red {
+    background-color: red;
+    width: 300px;
+    height: 300px;
+    position: relative; /* Posizione relativa per il div con classe red */
+}
+
+
+/* L'immagine posizionandosi all'interno del box-red ed essendo posizione assoluta, prenderà la posizione a partire
+    Dalla dimensione del suo contenitore, quindi div con classe red , sarà il suo contenitore, quindi il right 50px, sarà a partire dal 
+    Bordo destro del div con classe RED */
+
+img {
+    border: 2px solid black;
+    position: absolute; /* Posizione assoluta per l'immagine */
+    left: 50px;   /* Di sposta 50 px da sinistra rispetto al div con classe .red che è diventato relative */
+}

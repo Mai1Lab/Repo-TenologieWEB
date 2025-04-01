@@ -1,5 +1,5 @@
 
-.red{
+.red1{
     background-color: red;
     width: 100px;
     height: 100px;
@@ -7,7 +7,7 @@
     left:100px; /* Sposta l'elemento 100px a destra */
 }
 
-.blue{
+.blue1{
     background-color: blue;
     width: 100px;
     height: 100px;
@@ -15,7 +15,7 @@
     bottom: 100px; /* Sposta l'elemento 100px in altoo (rispetto a dove sta dl bordo inferiore
     deve andare a 100 in alto , perchè con relative si parte dalla nuova posizione  */
 }
-.green{
+.green1{
     background-color: green;
     width: 100px;
     height: 100px;
@@ -24,3 +24,35 @@
     bottom:200px;
     left:200px;
 }
+
+/* SECONDO ESERCIZIO */
+.red{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    z-index: 0;
+
+}
+
+.blue{
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    bottom: 100px; /* Sposta l'elemento 100px in altoo (rispetto a dove sta dl bordo inferiore*/
+    left: 20px;
+    z-index: -1; /* Se mettiamo un numero più alto di quello della classe rossa, la blu si sovrappone alla rossa */
+ 
+}
+.green{
+    background-color: green;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    bottom :200px; /* Sposta l'elemento 200px in alto (rispetto a dove sta dl bordo inferiore e 200px a sinistra) */
+    left: 40px; /* Sposta l'elemento 200px a destra */
+    /* Sposta l'elemento 200px in alto (rispetto a dove sta dl bordo inferiore e 200px a sinistra) */
+    z-index: -2;
+}
+
+
