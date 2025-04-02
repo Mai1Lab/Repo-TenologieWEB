@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TEST</title>
+    <!-- Posso inserire javascript nel HEAD quì però NON è importante la posizione, non
+     c'è un ordine di esecuzione a differenza del Body!! 
+
+     SE LO SCRIPT SI TROVA all'interno dell'Head viene eseguito direttaemnte
+     potrebbe PERò' darte errore se alcuni elementi non sono specifici della pagina html
+     esempio , il javascript potrebbe lavoarare su dei DOM che ancora non si sono caricati -->
+    </head>
+        <body>
+            <!--Posso inserire javascript qui 2 in un punto qualsiasi ma rispettando
+            il posizionamento degli elementi, nell'ordine in cui vengono inseriti in html
+            - Non posso usare un DOM in un javascipt se non ancora caricato o attivato
+            - QUINDI potrebbe dare errore   -->
+            <p id="MyP">Hello World </p>
+            <!--Posso inserire javascript qui 3 prima della chiusura del Body viene renderizzato
+            alla fine. il fatto che sta alla fine e UN Pò prima della chiusura del body
+            mi da la sicurezza che tutti gli elementi della pagina sono stati tutti caricati!! :o))-->
+            <script>alert("Ciao Sofia")</script>
+        </body> 
+</html>
