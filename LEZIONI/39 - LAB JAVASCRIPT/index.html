@@ -23,8 +23,66 @@
         console.log("logging nel body")
            let x = 5;
            var y= x+2;
-       console.log(y);
+        console.log(y);
+
+
+        /*
+        questo è un commento su più linee
+        */
+
+        // questo è un commento su una riga
+
+        var w= 5; // dichiarazione di una variabile con var
+        var w="ciao"; // riassegno la variabile passando da numero a stringa
+        console.log("contenuto della variabile w: "+" "+ w); // stampa "ciao"
+
+        //non è ammessa con let, non posso riassegnare un nuovo tipo se la variabile è già stata dichiarata con let
+        let f="ciao"; // dichiarazione di una variabile con let
+        f=0; // riassegno la variabile passando da stringa a numero
+        //var x="ciao";
+
+        //operazione di selezione IF
+        var time = 20; // ora attuale
+     if (time<12){
+        saluto="buongiorno";
+     }else if (time<18){
+        saluto="buon pomeriggio";
+        }else{
+        saluto="buona sera";
+        }
+        console.log(saluto); // stampa "buona sera"
+
+
+        //ITERAZIONE CON FOR, attenzione tra parentesi tonde ci vanno i punti e virgola e non le virgole
+        for (var i=0; i<10; i++){
+            // codice da eseguire stampa 10 hello world
+            console.log("ciclo for+"+i+" hello world");
+        }
+
+        //ITERAZIONE CON WHILE, attenzione tra parentesi tonde ci vanno i punti e virgola e non le virgole
+        //faccio lo stesso del for ma con while
+        var i=0;
+        while (i<10){
+            // codice da eseguire stampa 10 hello world
+            console.log("ciclo while+"+i+" hello world");
+            i++;
+        }
+
+        //iterazione con do while, attenzione tra parentesi tonde ci vanno i punti e virgola e non le virgole
+        // la Particolarità del do while è che il codice viene eseguito almeno una volta!!
+        var i=0;
+        //faccio lo stesso del for ma con while
+        do{
+            // codice da eseguire stampa 10 hello world
+            console.log("ciclo do while+"+i+" hello world");
+            i++;
+        } while (i<10);
+
+
         </script>
+
+
+
     </body>
 
 
