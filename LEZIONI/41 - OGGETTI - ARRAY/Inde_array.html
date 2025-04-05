@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lezione 41 - ARRAY</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<!-- Esempio ARRAY---->
+<script>
+
+// Definisco un arrai di Elementi di tipo stringa, quindi tra apici e apici singoli o doppi
+// gli array sono una collezione di elementi di tipo diverso, in questo caso stringhe
+var frutti=['mela','banana','Arancia']
+var numeri=[1,2,3,4,5];
+
+// come accedere?
+console.log(numeri[0]);
+console.log('Elemento con indice 0 troviamo: '+frutti[0]);
+// stampo il primo elemento dell'array frutti
+//stampo tutti gli elementi dell'array numeri
+
+for (var i=0; i<numeri.length; i++){
+    console.log('Elemento con indice '+i+' troviamo: '+numeri[i]);
+};
+
+
+//operazioni su array
+
+//PUSH AGGIUNGE ALLA FINE DELL'ARRAY UN ELEMENTO
+//aggiunfo 20 al mio array numeri
+console.log('----------PUSH');
+console.log('----------agggiungo 20 alla fine dellarray con la Funzione PUSH');    
+numeri.push(5,6); //aggiungo 5 e 6 alla fine dell'array numeri
+for (var i=0; i<numeri.length; i++){
+    console.log('Elemento con indice '+i+' troviamo: '+numeri[i]);
+};
+
+//POP RIMUOVE L'ULTIMO ELEMENTO DELL'ARRAY
+console.log('----------POS');
+console.log('----------Elimino un elemento alla fine dellarray con la Funzione POP');    
+var numero_eliminato=numeri.pop(); //elimino l'ultimo elemento dell'array numeri
+console.log('Elemento eliminato: '+numero_eliminato); //stampo l'elemento eliminato
+for (var i=0; i<numeri.length; i++){
+    console.log('Elemento con indice '+i+' troviamo: '+numeri[i]);
+};
+
+
+//SPLICE RIMUOVE UN ELEMENTO DALL'ARRAY
+console.log('----------SPLICE');
+console.log('----------Elimino a partire dalla posizione 2 due elementi con la Funzione SPLICE');   
+numeri.splice(2,2) //elimino 2 elementi a partire dall'indice 2
+for (var i=0; i<numeri.length; i++){
+    console.log('Elemento con indice '+i+' troviamo: '+numeri[i]);
+};
+
+//SPLICE RIMUOVE UN ELEMENTO DALL'ARRAY
+console.log('----------SPLICE');
+console.log('----------Elimino a partire dalla posizione 2 due elementi con la Funzione SPLICE');   
+numeri.splice(2,1,6) // elimino a partire dall'indice 2 un elemento e lo sostituisco con 6
+for (var i=0; i<numeri.length; i++){
+    console.log('Elemento con indice '+i+' troviamo: '+numeri[i]);
+};
+
+
+//SPLICE RIMUOVE UN ELEMENTO DALL'ARRAY
+console.log('----------SPLICE');
+console.log('----------ho 2,0,7,5 Significa che dalla posizione 2 non elimino nulla, ma aggiungo 7 e 5 a partire dalla posizione 2');   
+numeri.splice(2,0,7,5) // a partire da indice 2 , non elimino nulla, perchè c'è zero , però aggiugo 7 e 5 a partire sempre da indice 2
+for (var i=0; i<numeri.length; i++){
+    console.log('Elemento con indice '+i+' troviamo: '+numeri[i]);
+};
+
+var nuovo_array=numeri.splice(2,4);// elimino a partire dall'indice 2,  4 elementi e li metto in un nuovo array
+//SPLICE RIMUOVE UN ELEMENTO DALL'ARRAY
+console.log('----------');
+console.log('----------');   
+
+for (var i=0; i<nuovo_array.length; i++){
+    console.log('Elemento con indice '+i+' troviamo: '+nuovo_array[i]);
+};
+
+
+console.log('----------maione');
+var maione=[5,6,7];
+for (var i=0; i<maione.length; i++){
+    console.log('Elemento con indice '+i+' troviamo: '+maione[i]);
+};
+
+console.log('----------elimino gli ultimi 2 elementi dellarray maione con la funzione SPLICE');
+maione.splice(1,2);
+for (var i=0; i<maione.length; i++){
+    console.log('Elemento con indice '+i+' troviamo: '+maione[i]);
+};
+</script>
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+</html>
