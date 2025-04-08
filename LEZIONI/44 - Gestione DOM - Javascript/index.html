@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<tilte>Gestion del DOM - in Javascript</tilte>
+
+
+
+
+</head>
+<body>
+<h1>Gestione del DOM - in Javascript</h1>
+<script>
+    // in variable possiamo memorizzare un elemento del DOM,
+    //  prelevo l'elemento con id header
+    // e lo memorizzo nella variabile header
+    var header= document.getElementById("header");
+
+    //Sulla variabile che contiene il mio DOM, imposto uno style backround blue
+    header.style.backgroundColor="blue";
+
+    //nella variabile boxes inserisco tutti gli elementi con classe box
+    var boxes=document.getElementsByClassName("box");
+
+    //vado a modificare il border di tutti gli elementi con classe box
+    //utilizzando un ciclo for per ogni elemento di boxes
+    for (var i=0;i<boxes.leght;i++){
+        boxes[i].style.border="1px solid black";
+    }
+
+    //prelevo  tutti i figli diretti del main, che è un id #main che sono paragrafi
+    var paragraphs=documento.querySelectorAll("#main > p");
+
+    for (vari=0;i<paragraphs.lenght;i++){
+        //per ogni paragrafo, vado a modificare la dimensione del font
+        //impostando un font-size di 12px
+        paragraphs[i].style.fontSize="12px";
+    }
+
+</script>
+
+
+
+
+
+</body>
+
+
+
+
+
+
+</html>
