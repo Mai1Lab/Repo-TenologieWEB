@@ -17,7 +17,13 @@ così da poterci lavorare sopra con il nostro Javascript
 <button id="btn">Fai clic qui</button>
 <hr>
 <button id="btnaggiungi">Aggiungi un elemento alla lista</button>
-<ul id="Lista"></ul>
+<!-- i due pulsanti hanno ID diversi 
+ -->
+<ul id="Lista">
+
+
+
+</ul>
 
 
 <script>
@@ -25,7 +31,7 @@ così da poterci lavorare sopra con il nostro Javascript
 //vado ad aggiungere un evendoInAscolto su un click
 //l'evento in ascolto è un click, e quando viene cliccato il bottone, viene eseguita la funzione
 document.getElementById("btn").addEventListener("click",function(){
-    alert("Ti voglio Bene!!");
+    alert("Sofi Ti voglio Bene!!");
     
 });
 
@@ -34,13 +40,16 @@ document.getElementById("btn").addEventListener("click",function(){
 document.getElementById("btnaggiungi").addEventListener("click", function(){
 
     //creo un nuovo elemento lista li
-    var nuovoElemento=document.createElement("li");
+    //restotuisce un oggetto che è un nuovo elemento
+    var nuovoelemento=document.createElement("li");
 
     //imposto il contenuto del nuovo elemento lista li
     nuovoelemento.textContent="Nuovo elemento della Lista";
 
     //Aggiungo il nuovo elemento alla lista, che è un id #Lista
-    document.getElementById("Lista").appendChild(nuovoElemento);
+    //quindi vado a selezionare l'elemento con id=Lista e gli aggiungo il nuovo elemento
+    // appendChild è un metodo che aggiunge un figlio all'elemento padre in coda!!
+    document.getElementById("Lista").appendChild(nuovoelemento);
 
 
 
