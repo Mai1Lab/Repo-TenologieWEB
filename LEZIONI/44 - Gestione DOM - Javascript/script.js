@@ -21,10 +21,20 @@ function validaform(){
 
 
 const itemList = document.querySelector('#item-list');
+//effettuo un querySelector per prendere l'elemento con id item-list (la lista) sarebbe il mio DIv c'è solo lui.
 
 itemList.addEventListener('click', function(event) {
+    //aggiungo un evento click alla lista (al div)
+    //se clicco su un elemento della lista (li) allora gli aggiungo la classe selected
+
     if (event.target.tagName === 'LI') {
         event.target.classList.toggle('selected');
+
+        //la classe .selected viene aggiunta o tolta (toggle) all'elemento su cui ho cliccato (event.target)
+        //event.target è l'elemento su cui ho cliccato (il li) 
+        //tagName mi da il nome del tag dell'elemento su cui ho cliccato (LI)
+        //se clicco su un altro elemento della lista (li) allora gli tolgo la classe selected
+        //se clicco su un elemento che non è un li (es. il div) allora non faccio niente.
     }
 });
 
@@ -46,6 +56,8 @@ form.addEventListener('submit', function(event) {//mi prendo l'evento submit del
 function addItemToList(value) {
     const newItem = document.createElement('li');
     newItem.textContent = value;
+    //itemList è il mio div (la lista) e newItem è il mio nuovo elemento li (la lista)
+    //textContent mi da il valore del campo di input (il campo di testo).
     itemList.appendChild(newItem);
 }
 
