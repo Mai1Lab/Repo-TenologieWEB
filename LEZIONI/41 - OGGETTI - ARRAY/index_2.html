@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lezione 41 - Oggetti e Array</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<!-- Esempio di Oggetto ---->
+<script>
+
+// questo è un oggetto
+// gli oggetti sono una collezione di proprietà e metodi
+// le proprietà sono le variabili che appartengono all'oggetto
+// turnoOn e turnOff sono i metodi dell'oggetto
+// turnOn setta la proprietà isOn a true e turnOff setta la proprietà isOn a false
+
+// in un oggetto si possono definire anche metodi
+
+const car={
+    make:'Honda',
+    model:'Civic',
+    year:2020,
+    isOn:false,
+    turnOn: function(){
+        this.isOn=true;// setta la proprietà isOn a true
+        // this è una parola chiave che fa riferimento all'oggetto corrente
+        console.log('La macchina è accesa');
+    },
+    turnOff: function(){
+        this.isOn=false;
+        console.log('La macchina è spenta');
+    },
+
+}
+car.turnOn(); // accende la macchina in questo caso la proprietà isOn è true. La funzione agisce sulla
+// proprietà isOn dell'oggetto car in particolare sulla proprietà isOn.
+    
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+</html>

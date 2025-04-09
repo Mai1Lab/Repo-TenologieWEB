@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lezione 41 - Oggetti e Array</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<!-- Esempio di Oggetto ---->
+<script>
+
+    
+const person ={
+    name: 'John doe',
+    age:30,
+    address: {
+        Street: 'Via Roma',
+        City: 'Roma',
+        state:'IT'
+    }
+
+}
+console.log(person.name); // stampi il nome persona.proprietà
+console.log(person.address.City); // stampi la città
+console.log(person['age']); // stampi l'età
+
+
+
+console.log('--------------'); // stampi una riga vuota
+console.log('Oggetto person'); // stampi l'oggetto
+console.log('--------------'); // stampi una riga vuota
+console.log('Tutte le proprietà dell\'oggetto'); // stampi tutte le proprietà dell'oggetto
+/*Oppure avendo a che fare con un Array vettore di elementi, possono andare a scorrere tutte le proprietà
+    con un cliclo for utilizzando for in */
+
+
+
+
+
+for (var i in person) { // per ogni proprietà dell'oggetto
+if (typeof person[i] === 'object') { // se la proprietà è un oggetto
+      
+        for (var j in person[i]) { // per ogni proprietà dell'oggetto
+            console.log(j + ':' + person[i][j]); // stampi la proprietà dell'oggetto
+        }
+    } else {
+        console.log(i + ':' + person[i]); // stampi la proprietà dell'oggetto
+    }
+
+    console.log(i + ':' + person[i]); // stampi tutte le proprietà dell'oggetto
+    // stampi tutte le proprietà dell'oggetto   
+
+}   
+
+</script>
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+</html>
