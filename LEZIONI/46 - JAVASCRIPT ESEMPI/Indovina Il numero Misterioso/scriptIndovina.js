@@ -2,6 +2,7 @@
     // // Il numero misterioso da indovinare math.floor(Math.random() * 100) + 1;
     // // Math.floor() arrotonda il numero alla parte intera più vicina
 var numeroMisterioso = Math.floor(Math.random() * 100) + 1;
+console.log(numeroMisterioso); // per vedere il numero misterioso generato
     //random genera numeri casuali tra 0 e 1, moltiplicandolo per 100 ottengo numeri tra 0 e 99,
     // aggiungendo 1 ottengo numeri tra 1 e 100.
 
@@ -60,8 +61,9 @@ function verificaTentativo()
     // Verifica se il numero inserito è corretto
 if (valoreTentativo === numeroMisterioso) { // che culo ho già trovato il numero giusto!!
     clearInterval(timerInterval); // fermo il timer
-
-    document.getElementById("risultato").innerHTML = "Hai indovinato il numero in " +numTentativi + " tentativi!";
+  
+    
+    document.getElementById("risultato").innerHTML ="Hai indovinato il numero in " + numTentativi + " tentativ" + (numTentativi > 1 ? "i" : "o") + "!";
     inputTentativo.disabled = true; // disabilito l'input per non far inserire altri numeri
 } else {
     var messaggioRisultato = "Il numero è ";
