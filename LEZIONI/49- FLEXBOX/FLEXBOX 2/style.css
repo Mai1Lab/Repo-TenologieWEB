@@ -1,0 +1,14 @@
+.row {
+    display: flex;/* Imposta il contenitore come un flex container */
+    flex-wrap: wrap;/* Permette di andare a capo */
+    justify-content: space-between; /* Spazio tra gli elementi */
+}
+
+.box {
+    width: 200px; /* Larghezza fissa per ogni box */
+    height: 200px; /* Altezza fissa per ogni box */
+    background-color: #d3d3d3; /* Colore di sfondo */
+    border: 1px solid #000; /* Bordo nero */   
+    box-sizing: border-box; /* Include il padding e il bordo nella larghezza e altezza */
+    margin-bottom: 20px; /* Margine inferiore per distanziare le righe */
+}
