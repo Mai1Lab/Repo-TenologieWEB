@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Indovina il numero</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome/
+5.15.3/css/all.min.css" integrity="sha512-
+iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=
+=" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+<h1>Indovina il numero</h1>
+<p>Benvenuto nel gioco "Indovina il numero"! Il tuo obiettivo è indovinare un numero casuale compreso tra 1 e 100.</p>
+<p>Ho pensato a un numero tra 1 e 100. Prova ad indovinare!</p>
+<p>Inserisci il tuo tentativo:</p>
+<input type="text" id="tentativo">
+<!-- inserisco il numero da indovinare e al text do id="tentativo"
+-->
+
+<!--  creo un bottone per inviare il tentativo
+// al click del bottone viene eseguita la funzione verificaTentativo()-->
+<input type="button" value="Indovina" onclick="verificaTentativo()">
+
+
+<div class="risultato" id="risultato"></div>
+<p>Tentativi fatti: <span id="num-tentativi">0</span></p>
+<p class="timer">Tempo rimanente: <span id="timer"></span></p>
+<script src="scriptindovina.js"></script>
+</body>
+</html>
