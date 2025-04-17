@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Esempio di utilizzo di Bootstrap e media queries</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+<style>
+/* Regole CSS personalizzate */
+@media only screen and (min-width: 768px) {
+.container {
+max-width: 800px;
+}
+}
+@media only screen and (min-width: 992px) {
+.container {
+max-width: 1000px;
+}
+}
+@media only screen and (min-width: 1200px) {
+.container {
+max-width: 1200px;
+}
+}
+</style>
+</head>
+<body>
+<div class="container"> <!--  deve iniziare sempre con  un div con classe container -->
+<div class="row">
+    <!--Ogni div è una colonna, che a seconda dello dimensione della finestra, si adatta.
+        Se sto su una finestra, device con una risoluzione superiore ai 576 ma < di 768 attivo .col-sm (che prevede
+        col-sm-6 ovvero una riga con due solo colonne 6+6) -->
+<div class="col-sm-6 col-md-4 col-lg-3" style="background-color:red;color: white;">Colonna 1</div>
+<div class="col-sm-6 col-md-4 col-lg-3" style="background-color:green;color: white;">Colonna 2</div>
+<div class="col-sm-6 col-md-4 col-lg-3" style="background-color:blue;color: white;">Colonna 3</div>
+<div class="col-sm-6 col-md-4 col-lg-3" style="background-color:black;color: white;">Colonna 4</div>
+</div>
+</div>
+<script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></s
+cript>
+</body>
+</html>
