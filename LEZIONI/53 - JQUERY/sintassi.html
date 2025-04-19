@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <style>
+    #mio_div {
+      display: none;
+      background-color: lightblue;
+      padding: 20px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<button id="mostra">Mostra il div</button>
+
+<div id="mio_div">
+  Ciao! Io sono un div nascosto.
+</div>
+
+<script>
+  $("#mostra").click(function() {
+    $("#mio_div").fadeIn(6000, function() { /* CI metto 6 secondi per mostrre con un effetto in fadein
+                                                Il divo con id mio_div, dopodichè parte la mia funnction callback
+                                                 che mi spara a video l'alert */
+      alert("L'elemento è stato mostrato completamente!");
+    });
+  });
+</script>
+
+</body>
+</html>
