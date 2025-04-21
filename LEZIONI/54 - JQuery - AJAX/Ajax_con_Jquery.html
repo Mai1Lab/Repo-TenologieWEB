@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>AJAX con jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#btn-get-data').click(function() {
+                $.ajax({
+                    url: 'https://jsonplaceholder.typicode.com/todos/1',
+                    method: 'GET',
+                    dataType: 'json',
+                    success: function(data) {
+                        $('#data-container').html('<p>' + JSON.stringify(data) + '</p>');
+                        // Puoi anche formattare i dati come preferisci
+                        $('#data-container').html('<p>UserId: ' + data.userId  + ' ID:  ' + data.id + '</p><h1>Title: ' + data.title + '</h1>');
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                        console.error(textStatus, errorThrown);
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>AJAX con jQuery</h1>
+    <p>Fai clic sul pulsante per ottenere i dati da un'API.</p>
+    <p>Puoi utilizzare questo esempio per testare le chiamate AJAX.</p> 
+    <p>Puoi anche modificare l'URL per testare altre API.</p>
+    <br>
+    <p>Inserisco nel div con id "data-oontainer" il contenuto del corpo della risposta, in base<br> alla richiesta 
+    effettuata tramite $.ajax, dopo aver stringato tramite JSON.stringify(data) </p>
+    <h3>Ricordo che  JSON.stringify(data) normalizza in un formato dati javascript un oggetto json</h3>
+    <button id="btn-get-data">Ottieni dati</button>
+    <div id="data-container"></div>
+</body>
+</html>
