@@ -14,7 +14,7 @@
                     success: function(data) {
                         $('#data-container').html('<p>' + JSON.stringify(data) + '</p>');
                         // Puoi anche formattare i dati come preferisci
-                        $('#data-container').html('<p>UserId: ' + data.userId  + ' ID:  ' + data.id + '</p><h1>Title: ' + data.title + '</h1>');
+                        $('#data-container').html('<p>UserId: ' + data.userId  + ' ID:  ' + data.id + '</p><h1>Title: ' + data.title + '</h1>' + '<p>Completed: ' + data.completed + '</p>');
                     },
                     error: function(jqXHR, textStatus, errorThrown) {
                         console.error(textStatus, errorThrown);

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Fetch API Example</title>
+</head>
+
+<body>
+
+<div id="todo"></div>
+<div id="user"></div>
+
+<script>
+fetch('https://jsonplaceholder.typicode.com/todos/1') // Fetch della Todo
+.then(response => response.json()) // Conversione della risposta ottenuta in JSON, il broswer non sa come interpretare il json, quindi lo converte in un oggetto JS
+// La risposta è una Promise, quindi utilizziamo il metodo then per gestirla
+.then(todo => {
+// Popolamento della sezione Todo
+const todoDiv = document.getElementById('todo');
+const todoTitle = document.createElement('h1');
+todoTitle.textContent = todo.title; // Creazione di un elemento h1 per il titolo della Todo prelevato
+todoDiv.appendChild(todoTitle);
+// Ritorna il valore di todo per passarlo al prossimo then
+return todo;
+})
+.then(todo => { // Fetch dell'utente associato alla Todo
+// La risposta del primo then viene passata al secondo then come argomento
+// Estrapolazione dell'ID dell'utente dal Todo ottenuto
+// La proprietà userId della Todo contiene l'ID dell'utente associato
+
+const userId = todo.userId;
+return fetch(`https://jsonplaceholder.typicode.com/users/${userId}`);
+})
+.then(response => response.json())
+.then(user => {
+    const userDiv = document.getElementById('user');
+    const userName = document.createElement('h1');
+    userName.textContent = user.name; // Creazione di un elemento h1 per il nome dell'utente prelevato dal json restituito
+    userDiv.appendChild(userName);
+    const userEmail = document.createElement('p');
+    userEmail.textContent = user.email; // Creazione di un elemento p per l'email dell'utente prelevato dal json restituito
+// Popolamento della sezione User
+
+    userDiv.appendChild(userEmail);
+})
+.catch(error => {
+    console.error('Error:', error); // Gestione degli errori
+});
+</script>
+
+</body>
+
+</html>
+

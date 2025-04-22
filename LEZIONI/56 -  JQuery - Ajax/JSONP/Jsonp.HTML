@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Esempio JSONP con jQuery</title>
+</head>
+<body>
+<h1>Esempio JSONP con jQuery</h1>
+<button id="ajax-button-jsonp">Effettua richiesta</button>
+<div id="resultJsonp"></div>
+<h1>Esempio JSON con jQuery</h1>
+<button id="ajax-button-json">Effettua richiesta</button>
+<div id="resultJson"></div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+function handleResponseJsonp(response) { // Funzione di callback per gestire la risposta JSONP
+// La risposta JSONP viene passata come parametro alla funzione.
+// Funzione chiamata da JSONPlaceholder con i dati JSON come parametro
+console.log(response);
+// Mostra il risultato nella pagina HTML
+var resultDiv = document.getElementById("resultJsonp");
+resultDiv.innerHTML="<h2>Risultato:</h2><pre>"+ JSON.stringify(response, null,
+2) + "</pre>";
+}
+// Effettua la richiesta AJAX tramite JSONP al click del pulsante
+$('#ajax-button-jsonp').click(function() {
+$.ajax({
+url: 'https://jsonplaceholder.typicode.com/posts/1',
+dataType: 'jsonp',
+jsonpCallback: 'handleResponseJsonp' /* costruisco una funzione di Jsoncallback che verrà richiamata nel momento in cui avviene una richiesta Cross Origin */
+});
+});
+</script>
+
+<script>
+// Effettua la richiesta AJAX al click del pulsante
+$('#ajax-button-json').click(function() {
+$.ajax({
+url: 'https://jsonplaceholder.typicode.com/posts/1', /* Questa chiamata restituirà un POST */
+dataType: 'json', // Specifica il tipo di dati che ci aspettiamo in risposta
+success: function(response) {  /* In caso di successo, c'è funzione di callback: stampa in console la risposta */
+// Funzione chiamata al successo della richiesta AJAX
+console.log(response);
+
+// Mostra il risultato nella pagina HTML
+var resultDiv = document.getElementById("resultJson"); // inserisco in una variabile il div in cui voglio mostrare il risultato
+// Mostra il risultato nella pagina HTML
+resultDiv.innerHTML = "<h2>Risultato:</h2><pre>" + JSON.stringify(response,
+null, 2) + "</pre>";
+},
+error: function(xhr, status, error) {
+// Funzione chiamata in caso di errore della richiesta AJAX
+console.log("Errore: " + error);
+// Mostra l'errore nella pagina HTML
+var resultDiv = document.getElementById("resultJson");
+resultDiv.innerHTML = "<h2>Errore:</h2><p>" + error + "</p>";
+}
+});
+});
+</script>
+</body>
+</html>

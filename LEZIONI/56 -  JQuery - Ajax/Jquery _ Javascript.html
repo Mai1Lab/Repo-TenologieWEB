@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>La mia pagina con JavaScript</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<h1>La mia pagina con JavaScript</h1>
+<p id="mio_paragrafo">Questo è il mio paragrafo</p>
+<button id="mio_bottone">Cliccami!</button>
+
+<!-- Quando Utilizzo il Javascript nativo per effettuare un 'operazione di DOM
+    - Quando clicco il bottone con id=miobottone addEventListener("click" ) c'è una funzione di callback
+     che setta il paragrafo con id=mio_paragrafo con un nuovo testo html = "new Text" -->
+
+<script>
+document.getElementById("mio_bottone").addEventListener("click",
+function() {
+document.getElementById("mio_paragrafo").innerHTML = "new text";
+});
+</script>
+
+
+<!-- quì invece faccio la stessa cosa ma utilizzando Jquery, mi occorre però il richiamo a 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> nel Head -->
+
+    <h1>La mia pagina con Jquery</h1> 
+    <p id="mio_paragrafojquery">Questo è il mio paragrafo</p> 
+    <button id="mio_bottone2">Cliccami per jquery!</button>
+
+    <script>
+        $(document).ready(function() { /* document.ready significa che nel momento in cui la pagina è stata caricata */
+            $("#mio_bottone2").on("click", function() { /* CI sarà una function legata all'evento click del mio bottone */
+            $("#mio_paragrafojquery").text("new text con jquery");
+                                                    });
+        });
+    </script>
+
+
+
+</body>
+</html>
