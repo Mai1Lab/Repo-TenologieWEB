@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+<input type="text" value="Vecchio valore">
+<input type="text" value="Ancora vecchio valore">
+<p>ciao se passi sopra di me cambio testo</p>
+<p>ciao io sono un paragrafo diverso</p>
+<br><br>
+<button id="cambia">Cambia valore</button>
+
+<script>
+$(window).on("resize", function() {  // Funzione di callback per l'evento resize della finestra
+  $("input[type='text']").val("Nuovo valore");
+  $("input[type='text']").css("background-color", "yellow");
+});
+
+/* IN questo esempio utilizzo il metodo .hover associato al selettore "p"
+    ed eseguo una funzione di callback affinchè, dopo che passo con il mouse sopra, esegue il
+    cambio tempo */
+$("p").hover(function() {  // Funzione di callback per l'evento hover su un paragrafo
+  $(this).text("Hai passato il mouse sopra di me!");  // Cambia il testo del paragrafo SOLO passando sopra
+                                                    // e NON di tutti i paragrafi selezionati con $("p")
+                                                    // this è riferito al paragrafo su cui passo il mouse e NON a tutti
+});
+
+</script>
+
+</body>
+</html>

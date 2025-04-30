@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Socket.IO Chat</title>
+</head>
+<body>
+  <h1>Client WebSocket con Socket.IO</h1>
+  <form id="form">
+    <input type="text" id="message" placeholder="Scrivi un messaggio">
+    <button type="submit">Invia</button>
+  </form>
+  <div id="messages"></div>
+
+  <!-- Socket.IO client -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io(); // Connessione automatica a localhost:3000
+
+    const form = document.getElementById('form');
+    const messageInput = document.getElementById('message');
+    const messagesDiv = document.getElementById('messages');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const message = messageInput.value;
+      socket.emit('message', message);
+      messageInput.value = '';
+    });
+
+    socket.on('message', (msg) => {
+      const p = document.createElement('p');
+      p.textContent = msg;
+      messagesDiv.appendChild(p);
+    });
+  </script>
+</body>
+</html>

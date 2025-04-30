@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+<input type="text" value="Vecchio valore">
+<input type="text" value="Ancora vecchio valore">
+<br><br>
+<button id="cambia">Cambia valore</button>
+
+<script>
+  $("#cambia").click(function() {
+    $("input[type='text']").val("Nuovo valore");
+    $("input[type='text']").css("background-color", "yellow");
+  });
+</script>
+
+</body>
+</html>

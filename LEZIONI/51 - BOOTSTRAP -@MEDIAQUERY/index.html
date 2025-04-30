@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Query Demo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      margin: 0 auto;
+      padding: 20px;
+      background-color: lightblue;
+      text-align: center;
+      border: 2px solid #000;
+    }
+    /* Stile di base per la larghezza della finestra  prima che raggiunga il primo min-width*/
+
+    /* Impostazioni responsive */
+    @media only screen and (min-width: 768px) {
+      .container {
+        max-width: 800px;
+        background-color: lightgreen;
+      }
+    }
+
+    @media only screen and (min-width: 992px) {
+      .container {
+        max-width: 1000px;
+        background-color: orange;
+      }
+    }
+
+    @media only screen and (min-width: 1200px) {
+      .container {
+        max-width: 1200px;
+        background-color: lightcoral;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Resize la finestra! 📱💻🖥️</h1>
+    <p>Guarda come cambia la **larghezza** e il **colore di sfondo** della `.container` in base alla dimensione dello schermo.</p>
+    <p>Controlla anche con lo strumento "ispeziona" e ridimensiona la viewport!</p>
+  </div>
+
+</body>
+</html>
