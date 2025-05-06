@@ -20,5 +20,13 @@ router.get ('/items', (req, res) => { // Definisce una route per la pagina degli
 }); // Invia la lista degli oggetti come risposta quando viene effettuata una richiesta GET alla pagina localhost:3000/items
 
 
+//richiamo la rotta con un get e specificando l'id dell'oggetto
+router.get('/item/:id', (req, res) => {
+    const itemId = req.params.id; // Ottiene l'ID dell'oggetto dalla richiesta
+    const item = { id: itemId, name: `Item ${itemId}` }; // Crea un oggetto con l'ID e il nome dell'oggetto
+    res.render('item', { item }); // Renderizza la pagina "item.ejs" passando l'oggetto creato precedentemente come variabile
+  });
+
+
 
 module.exports = router;

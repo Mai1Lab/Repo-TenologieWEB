@@ -12,7 +12,8 @@ app.set('view engine', 'ejs'); // Imposta il motore di visualizzazione su EJS
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// Configura la cartella "public" per i file statici
+// Configura la cartella "public" per i file statici, è una rotta predefinita di Express
+// per servire file statici come CSS, immagini e JavaScript
 app.use(express.static(path.join(__dirname, 'public')));
 
 
