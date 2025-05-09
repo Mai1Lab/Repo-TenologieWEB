@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="myApp"> <!-- Aggiunto ng-app per AngularJS è la prima direttiva-->
+<head>
+    <meta charset="UTF-8">
+    <title>Primo Esempio AngularJS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="script.js"></script> <!-- Aggiunto il file script.js per il controller -->
+</head>
+
+<body ng-controller="myCtrl"> <!-- Aggiunto ng-controller per definire il controller 
+                                    Tutto il bosy utilizzerà il controller MyCtrl-->
+
+    <h1>{{ greeting }}</h1>
+    <input type="text" ng-model="name" placeholder="Inserisci il tuo nome"> <!-- Aggiunto ng-model per legare il campo di input alla variabile name -->
+    <p>Ciao, {{ name }}</p>
+
+   
+    
+
+    <input type"text" ng-model="cognome" placeholder="Inserisci il tuo cognome"> <!-- Aggiunto ng-model per legare il campo di input alla variabile cognome -->
+    <p>Ciao, {{ name }} {{ cognome }}</p> <!-- Aggiunto il binding per visualizzare il cognome -->
+</body>
+</html>

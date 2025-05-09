@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<script
+src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+</script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl"> <!-- Inizializza l'app AngularJS e specifica il controller 'myCtrl' -->
+
+<h1 ng-mousemove="count_move = count_move + 1">Mouse Move!</h1> <!-- ng-mousemove incrementa 'count_move' ogni volta che il mouse si muove sopra l'elemento -->
+<h2>{{ count_move }}</h2> <!-- Mostra il conteggio degli eventi di movimento del mouse  tramite interpolazione di stringhe-->
+
+<h1 ng-mouseover="count_over = count_over + 1">Mouse Over!</h1>
+<!-- ng-mouseover incrementa 'count_over' ogni volta che il mouse passa sopra l'elemento -->
+<h2>{{ count_over }}</h2>
+</div>
+
+
+<script>
+var app = angular.module('myApp', []); // Definisce un modulo AngularJS chiamato 'myApp'
+// Il secondo argomento è un array vuoto che indica che non ci sono dipendenze da altri moduli
+
+// Definisce un controller chiamato 'myCtrl' all'interno del modulo 'myApp'
+app.controller('myCtrl', function($scope) {
+$scope.count_move = 0;
+$scope.count_over = 0;
+});
+</script>
+</body>
+</html>

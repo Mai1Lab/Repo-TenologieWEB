@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="myApp"> <!-- ng-app inizializza l'app AngularJS e specifica il modulo principale ("myApp") -->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Primo Esempio AngularJS</title>
+    
+    <!-- Includi la libreria AngularJS dal CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <!-- Includi un file JavaScript esterno dove presumibilmente sono definiti i controller -->
+    <script src="script.js"></script> <!-- Deve contenere myCtrl e userController -->
+</head>
+
+<body>
+
+    <!-- Primo controller: myCtrl -->
+    <div ng-controller="myCtrl">
+        <h1>{{ greeting }} </h1> <!-- Mostra la variabile 'greeting' dal controller -->
+        <input type="text" ng-model="name"> <!-- ng-model crea un binding bidirezionale con 'name' -->
+        <p>Hello, {{ name }}!</p> <!-- Mostra il contenuto aggiornato della variabile 'name' -->
+    </div>
+
+    <!-- ng-app senza nome per un'app AngularJS autonoma -->
+    <div ng-app="" ng-init="firstName='Vincenzo'"> <!-- Inizializza 'firstName' con 'Vincenzo' -->
+        <p> Il nome è <span ng-bind="firstName"></span></p> <!-- Mostra il nome inizializzato -->
+    </div>
+
+    <!-- Secondo controller: userController -->
+    <div ng-controller="userController">
+        <h1>Users</h1>
+        <ul>
+            <!-- ng-repeat itera sugli utenti definiti in 'users' -->
+            <li ng-repeat="user in users">
+                {{ user.name }} ({{ user.email }})
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>

@@ -11,6 +11,7 @@ app.set('view engine', 'ejs'); // Imposta il motore di visualizzazione su EJS
 // Configura il middleware per il parsing del corpo delle richieste HTTP
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+// Configura il middleware per il parsing delle richieste JSON
 
 // Configura la cartella "public" per i file statici, è una rotta predefinita di Express
 // per servire file statici come CSS, immagini e JavaScript
